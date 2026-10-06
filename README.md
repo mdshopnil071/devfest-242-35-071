@@ -13,7 +13,7 @@ Built for **AI DevFest** • Developed by **Md. Khairul Anam Shopnil**
 ---
 
 ## 🚀 Live Demo & Deployment
-- **Live URL**: `[INSERT_YOUR_PUBLIC_HTTPS_DEPLOYMENT_URL_HERE]`
+- **Live URL**: [https://mdshopnil071.github.io/devfest-242-35-071/](https://mdshopnil071.github.io/devfest-242-35-071/)
 - **GitHub Repository**: [https://github.com/mdshopnil071/devfest-242-35-071](https://github.com/mdshopnil071/devfest-242-35-071)
 
 ---
