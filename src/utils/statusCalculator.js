@@ -8,8 +8,9 @@
  * - Not provided (Mandatory = false, no file matched) -> Blocks: false
  * - OK (File matched, and if has_expiry, expiry date >= submission deadline) -> Blocks: false
  */
-export function calculateDocumentStatus(req, match, submissionDeadline) {
-  const isMatched = !!match && !!match.fileId;
+export function calculateDocumentStatus(req, match, submissionDeadline, uploadedFiles = null) {
+  const fileExists = uploadedFiles === null || uploadedFiles.some(f => f.id === match?.fileId);
+  const isMatched = !!match && !!match.fileId && fileExists;
 
   if (!isMatched) {
     if (req.mandatory) {
@@ -79,7 +80,7 @@ export function validateAllRequirements(requirements, matches, submissionDeadlin
   
   requirements.forEach(req => {
     const match = matches[req.id];
-    const stat = calculateDocumentStatus(req, match, submissionDeadline);
+    const stat = calculateDocumentStatus(req, match, submissionDeadline, uploadedFiles);
     statusMap[req.id] = stat;
 
     if (stat.blocks) {

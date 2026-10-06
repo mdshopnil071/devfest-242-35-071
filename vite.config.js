@@ -7,5 +7,17 @@ export default defineConfig({
   server: {
     port: 5173,
     open: false
+  },
+  build: {
+    chunkSizeWarningLimit: 800,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'pdf-engine': ['pdf-lib'],
+          'react-vendor': ['react', 'react-dom'],
+          'ui-vendor': ['lucide-react', 'canvas-confetti']
+        }
+      }
+    }
   }
 });
