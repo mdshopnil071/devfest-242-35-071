@@ -7,6 +7,7 @@ import { FileUploadSection } from './components/FileUploadSection';
 import { DocumentChecklist } from './components/DocumentChecklist';
 import { PackageGeneratorModal } from './components/PackageGeneratorModal';
 import { SealSignatureModal } from './components/SealSignatureModal';
+import { AppFooter } from './components/AppFooter';
 import { identifyDuplicates } from './utils/duplicateDetector';
 import { validateAllRequirements } from './utils/statusCalculator';
 import { processUploadedFile } from './utils/fileValidators';
@@ -284,6 +285,9 @@ export function App() {
         setStampConfig={setStampConfig}
         t={t}
       />
+
+      {/* Developer Credit Footer (always visible at bottom) */}
+      <AppFooter />
     </div>
   );
 }

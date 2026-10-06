@@ -496,3 +496,46 @@ button, input, select {
   touch-action: manipulation;
 }
 
+/* -------------------------------------------------------------
+   Footer & Developer Credits
+   ------------------------------------------------------------- */
+.app-footer {
+  margin-top: 50px;
+  padding: 24px 16px;
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.footer-dot {
+  color: var(--text-sub);
+}
+
+.developer-name {
+  color: #a5b4fc;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-shadow: 0 0 14px rgba(165, 180, 252, 0.45);
+}
+
+/* Generation Bar Credit */
+.generation-bar-credit {
+  width: 100%;
+  text-align: center;
+  font-size: 0.775rem;
+  color: var(--text-muted);
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+
